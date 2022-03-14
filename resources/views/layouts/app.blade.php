@@ -76,7 +76,27 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Menu
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-itme">
+                                    <li class="list-group-itme">
+                                        <a href="{{ route('authors.index') }}">Author</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    @yield('content')
+                </div>
+            </div>
+
+
         </main>
     </div>
 </body>
