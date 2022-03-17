@@ -78,6 +78,8 @@
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
+                    @auth
+
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-header">
@@ -88,10 +90,16 @@
                                     <li class="list-group-itme">
                                         <a href="{{ route('authors.index') }}">Author</a>
                                     </li>
+                                    <li class="list-group-itme">
+                                        <a href="{{ route('books.index') }}">Book</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    @endauth
+
+
                     @yield('content')
                 </div>
             </div>

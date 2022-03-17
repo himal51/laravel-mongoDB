@@ -15,7 +15,8 @@
                     <ul class="list-group">
                         @forelse($authors as $author)
                             <li class="list-group-item">
-                                {{ $author->name }}
+                                {{ $author->name }} | Total Books -  {{ count($author->books) }}
+
                                 <span class="float-end">
                                     <a href="{{ route('authors.edit', [$author->id]) }}" class="btn btn-warning"> Edit</a>
                                     &nbsp; &nbsp; &nbsp;
